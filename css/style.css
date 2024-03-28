@@ -231,6 +231,13 @@ input, select, button{
     border: none;
 }
 
+#submit-btn{
+    margin-top: 10px;
+    background-color: tan;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
 .person-img img{
     margin-top: 10px;
     height: 100px;
