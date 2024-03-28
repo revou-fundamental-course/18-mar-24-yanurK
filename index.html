@@ -3,24 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Dargombez Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Our Google Fonts Link Here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+    <title>Dargombez - Travel Agent</title>
 </head>
 <body>
-    <header>
-        <h1>Dargombez Website</h1>
+    <!-- top logo and navbar -->
+    <header class="navbar">
+        <section class="nav1">
+            <a href="#"><img src="./assets/logo.png" id="logo"></a>
+        </section>
+        <section class="nav2">
+            <ul>
+                <li class="home">Home</li>
+                <li class="our-package"><a href="#our-pkg" style="text-decoration: none;">Package </a></li>
+                <li class="call-us">Call Us</li>
+            </ul>
+        </section>
     </header>
-    <main>
-        <h2>
-            Page Title
-            <section class="section1"></section>
-            <section class="section2"></section>
-        </h2>
+    <hr>
+    <!-- Content start---- banner and form -->
+    <main class="content">
+        <section class="openning">
+            <h2 class="hook">Healing Aman & Nyaman Bersama Kami</h2>
+            <h3 class="motto">...karena kebahagiaan anda adalah tujuan kami...</h3>
+        </section>
+        <section class="container-feature">
+            <aside>
+                
+                <!-- auto-slide banner content -->
+                <section class="autoslide-banner-content">
+                    <section class="slideshow-container">
+                        <div class="slide-image">
+                            <img src="./assets/bromo1.jpg" alt="image1.jpg" title="gunung bromo">
+                        </div>
+                        <div class="slide-image">
+                            <img src="./assets/bromo2.jpg" alt="image2.jpg" title="kawah gunung bromo">
+                        </div>
+                        <div class="slide-image">
+                            <img src="./assets/bromo3.jpg" alt="image3.jpg" title="gunung bromo">
+                        </div>
+                        <div class="slide-image">
+                            <img src="./assets/bromo4.jpg" alt="image4.jpg"title="bukit teletubbies">
+                        </div>
+                        <div class="slide-image">
+                            <img src="./assets/bromo5.jpg" alt="image5.jpg" title="lautan pasir gunung bromo">
+                        </div>
+                    
+                    </section>
+                </section>
+                <br>
+                <section class="testimonial-words"><i>"Liburan Menyenangkan dan Aman bersama DGZ"</i></section>
+                <section class="testimonial-person">
+                    <div class="person-img">
+                        <img src="./assets/maman.png" alt="person1.jpg">
+                    </div>
+                    <div class="person-detail">
+                        <p>Kang Maman Racing</p>
+                        <p>Pembalap Motor, 35</p>
+                    </div>
+                </section>
+
+            </aside>
+
+            <!-- form content -->
+            <section class="form-content">
+                <h3>Hubungi Kami</h3>
+                <p>Tim kami akan menghubungi anda dalam 1x24 jam setelah data kami terima.</p>
+                <form id="call-us-form">
+                    <label for="username"><strong>Nama Lengkap:</strong></label>
+                    <input type="text" id="username" placeholder="Nama Lengkap" minlength="3" autofocus required><br>
+                    <label for="email"><strong>E-mail:</strong> </label>
+                    <input type="email" name="email" id="email" placeholder="yourname@mail.com" required><br>
+                    <label for="destination"><strong>Pilih Tujuan Anda:</strong></label>
+                    <select name="destination_name" id="destination" required>
+                        <option value="" selected>Pilih tempat tujuan</option>
+                        <option value="Kawah Gunung Bromo" >Kawah Gunung Bromo</option>
+                        <option value="Pasir Berbisik" >Pasir Berbisik</option>
+                        <option value="Bukit Teletubbies" >Bukit Teletubbies</option>
+                        <option value="Penanjakan" >Penanjakan</option>
+                        <option value="Padang Rumput Savana" >Padang Rumput Savana</option>
+                        <option value="Puncak B29" >Puncak B29</option>
+                    </select><br>
+                    <button type="submit" id="submit-btn" onclick="callUs(this)">Kirim</button>
+                </form>
+            </section>
+        </section>
+        <!-- benefit content -->
+        <section class="container-benefit">
+            <h3><u>Kenapa Lebih Baik Memilih Kami :</u></h3>
+            <ol class="benefit-list">
+                <li>Keamanan dan Kenyamanan Anda selama perjalanan terjamin</li>
+                <li>Rekomendasi tempat terbaik di setiap spot tujuannya </li>
+                <li>Berbagai macam pilihan armada sesuai kebutuhan Anda</li>
+                <li>Diskon seru setiap repeat booking !!</li>
+            </ol>
+        </section>
+        <!-- package content -->
+        <p class="space-one" id="our-pkg">OUR PACKAGE</p>
+        <section class="container-package">
+            
+            <div class="package-1">
+                <div class="bottom-left"><strong>Gunung Bromo</strong></div>
+                <img src="./assets/kawah.jpg" alt="Kawah Gunung Bromo" class="img1">
+                <div class="overlay package1">
+                    <div class="text1">
+                        Salah satu tujuan utama para wisatawan yang datang ke Gunung Bromo adalah untuk mendaki ke puncaknya. 
+                        Dari puncaknya akan terlihat kawah Gunung Bromo yang masih sangat aktif.
+                    </div>
+                </div>
+            </div>
+
+            <div class="package-2">
+                <div class="bottom-left"><strong>Pasir Berbisik</strong></div>
+                <img src="./assets/pasir-berbisik.jpg" alt="Pasir Berbisik" class="img2">
+                <div class="overlay package2">
+                    <div class="text2">
+                        Pasir Berbisik merupakan salah satu area di sekitar Gunung Bromo yang berisi hamparan pasir. 
+                        Pasir ini sangat unik dan merupakan salah satu Kelebihan Wisata Gunung Bromo.
+                    </div>
+                </div>
+            </div>
+
+            <div class="package-3">
+                <div class="bottom-left"><strong>Bukit Teletubbies</strong></div>
+                <img src="./assets/bukit-teletubbies.jpg" alt="Bukit Teletubbies" class="img3">
+                <div class="overlay package3">
+                    <div class="text3">
+                        Pemandangan dari Bukit Teletubbies ini sangat menawan. 
+                        Hamparan hijau yang terlihat sangat lembut ini akan mengingatkan Anda dengan serial televisi Teletubbies. 
+                    </div>
+                </div>
+            </div>
+
+            <div class="package-4">
+                <div class="bottom-left"><strong>Penanjakan</strong></div>
+                <img src="./assets/penanjakan.jpg" alt="Penanjakan" class="img4">
+                <div class="overlay package4">
+                    <div class="text4">
+                        Banyak orang yang rela pergi jauh-jauh ke Bromo hanya untuk menikmati suasana matahari terbit dari sana. 
+                        Memang suasana matahari terbit di Bromo sangat indah jika Anda berkunjung pada saat yang tepat.
+                    </div>
+                </div>
+            </div>
+
+            <div class="package-5">
+                <div class="bottom-left"><strong>Padang Rumput Savana</strong></div>
+                <img src="./assets/savana.jpeg" alt="Padang Rumput Savana" class="img5">
+                <div class="overlay package5">
+                    <div class="text5">
+                        Padang rumput savana merupakan sebuah hamparan padang hijau yang sangat luas dan indah.
+                        Gunung Bromo juga memiliki Padang Rumput Savana indah yang memanjakan mata.
+                    </div>
+                </div>
+            </div>
+            <div class="package-6">
+                <div class="bottom-left"><strong>Puncak B29</strong></div>
+                <img src="./assets/puncak-b29.jpg" alt="Puncak B29" class="img6">
+                <div class="overlay package6">
+                    <div class="text6">
+                        Jika Anda ingin menikmati kawasan Pegunungan Tengger. Di bukit ini Anda masih bisa melihat rangkaian pegunungan Gunung Bromo. 
+                        Tempat ini juga merupakan <u>Tempat Sunrise Terindah di Dunia</u>.
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="container-closing">
+            <p class="closing-quote">"We wander for distraction, but we travel for fulfillment."</p>
+            <p>- Hilaire Belloc -</p>
+        </section>
+        
     </main>
+    <hr />
     <footer>
-        <p>&copy;</p>
+        <p>Terms of Service<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>Privacy Policy</p>
+        <p>&copy;2024 DARGOMBEZ</p>
     </footer>
-    <script type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>
