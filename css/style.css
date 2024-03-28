@@ -67,17 +67,18 @@ div>img{
     
 }
 
-ul:hover li{
+.nav2 ul:hover li{
     transform: scale(1.5);
     -webkit-transform: scale(1.5);
     -moz-transform: scale(1.5);
     -ms-transform: scale(1.5);
     -o-transform: scale(1.5);
     opacity: 0.2;
-    
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
 }
 
-.nav2 li:hover{
+.nav2 ul li:hover{
     cursor: pointer;
     color:black;
     transform: scale(2);
@@ -86,8 +87,10 @@ ul:hover li{
     -ms-transform: scale(2);
     -o-transform: scale(2);
     opacity: 1;
-
+    filter: blur(0.1px);
+    -webkit-filter: blur(0.1px);
 }
+
 .openning{
     display: grid;
     justify-items: center;
